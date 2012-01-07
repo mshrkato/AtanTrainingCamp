@@ -1,9 +1,6 @@
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
-
-class HelloWorld(webapp.RequestHandler):
-    def get(self):
-        self.response.out.write("Hello, World!")
+from handlers.hello import HelloWorld
 
 application = webapp.WSGIApplication([('/', HelloWorld)],
                                      debug=True)
