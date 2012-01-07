@@ -4,7 +4,8 @@ from handlers.hello import HelloWorld
 from handlers.yonta import Yonta
 
 application = webapp.WSGIApplication([('/yonta/',Yonta),
-                                      ('/', HelloWorld)],
+                                      ('/', HelloWorld),
+                                      ('/naga', HelloWorld)],
                                      debug=True)
 
 def main():
