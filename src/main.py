@@ -1,11 +1,13 @@
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 from handlers.hello import HelloWorld
+from handlers.bye import ByeWorld
 from handlers.yonta import Yonta
 from handlers.gege import  Gegegege 
 
-application = webapp.WSGIApplication([('/yonta/',Yonta),
-                                      ('/', HelloWorld),
+application = webapp.WSGIApplication([('/', HelloWorld),
+                                      ('/bye/', ByeWorld),
+                                      ('/yonta/',Yonta),
                                       ('/naga/',Gegegege )],
                                      debug=True)
 
