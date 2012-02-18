@@ -11,4 +11,5 @@ class HelloWorld(webapp.RequestHandler):
         values = {'user' : user, 'age' : age}
         path = join(dirname(dirname(__file__)), 'template', 'hello.html')
         body = template.render(path, values)
+        body = 'Hello world!'
         self.response.out.write(body)
