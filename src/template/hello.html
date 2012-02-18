@@ -1,6 +1,17 @@
 <html>
-  <head><title>Hello, {{ user }}!</title></head>
   <body>
-    {{ user }} is {{ age }} years old.
+    {% for greeting in greetings %}
+      <b>{{ greeting.name }}</b>({{ greeting.age }}) wrote:
+      <blockquote>{{ greeting.content }}</blockquote>
+    {% endfor %}
+
+    <form action="/" method="post">
+      <div>
+        <input type="text" name="name" />
+        <input type="text" name="age" />
+      </div>
+      <div><input type="text" name="content" /></div>
+      <div><input type="submit" value="Sign Guestbook"></div>
+    </form>
   </body>
 </html>
