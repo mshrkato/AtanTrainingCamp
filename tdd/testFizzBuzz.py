@@ -4,7 +4,6 @@ from nose.tools import *
 class TestFizzBuzz():
 	def testFirstCall(self):
 		"1st call"
-		for
 		fizzbuzzer = FizzBuzzer()
 		eq_('1', fizzbuzzer.call())
 
