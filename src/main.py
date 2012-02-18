@@ -5,14 +5,15 @@ from handlers.bye import ByeWorld
 from handlers.yonta import Yonta
 from handlers.gege import  Gegegege 
 
-application = webapp.WSGIApplication([('/', HelloWorld),
+def application():
+    return webapp.WSGIApplication([('/', HelloWorld),
                                       ('/bye/', ByeWorld),
                                       ('/yonta/',Yonta),
                                       ('/naga/',Gegegege )],
                                      debug=True)
 
 def main():
-    run_wsgi_app(application)
+    run_wsgi_app(application())
 
 if __name__ == "__main__":
     main()
